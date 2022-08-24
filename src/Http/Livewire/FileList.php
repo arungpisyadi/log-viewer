@@ -28,12 +28,12 @@ class FileList extends Component
 
     public function download(string $fileName)
     {
-        return LogViewer::getFile($fileName)?->download();
+        // return LogViewer::getFile($fileName)?->download();
     }
 
     public function deleteFile(string $fileName)
     {
-        LogViewer::getFile($fileName)?->delete();
+        // LogViewer::getFile($fileName)?->delete();
 
         if ($this->selectedFileName === $fileName) {
             $this->selectedFileName = '';
@@ -43,7 +43,7 @@ class FileList extends Component
 
     public function clearCache(string $fileName)
     {
-        LogViewer::getFile($fileName)?->clearIndexCache();
+        // LogViewer::getFile($fileName)?->clearIndexCache();
 
         if ($this->selectedFileName === $fileName) {
             $this->emit('fileSelected', $this->selectedFileName);
